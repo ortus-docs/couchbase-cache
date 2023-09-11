@@ -61,17 +61,52 @@ Click it and then click the **install** button to begin the installation process
 
 Extension details
 
-### Activating the Extension {#activating_the_extension}
+### Activating the Extension
+
+#### Lucee Administrator Activation
 
 Once the extension installs, you will now see a new menu item in the admin called \"Ortus\" with a sub menu called \"Couchbase Cache\". Click this menu and you\'ll see the activation screen where you can enter the **license key** and **license email** with which you purchased the extension with. You will also have to determine the type of server you are installing the extension to. Development or non-public facing servers are FREE of charge and by default receive up to 4 activations. Production servers get only 1 activation, so make sure you choose the right server type. Once you get all your information in the form then click on the **activate** button to finalize the installation. Choose the trial option if you don\'t have a license and just want to try out the extension. When the trial expires, the cache provider will stop working! The trial is not for production use.
 
 **Note** : Development and staging servers are FREE of charge and each license includes up to 4 activations. Production licenses are on a per Lucee instance and are allowed 1 activation. If you have any activation issues please contact us at <support@ortussolutions.com>. Also, make sure you havea valid internet connection in order to activate your product.
 
 ![image](../.gitbook/assets/extension_activation.png)
-
 Extension Activation
 
 The Ortus Lucee Couchbase Extension should now be installed on your server and ready to use. We highly recommend you restart your entire servlet container (Tomcat/Resin/jetty/etc) in order for all Jar files to take effect. Make sure your Couchbase cluster is running and proceed on to the next step\-- creating a cache.
 
 **Important**: Please note that the Couchbase Extension is licensed on a per-JVM basis. You will need a
 license for each separate JVM, regardless of how many contexts (sites) are deployed in your Lucee installation. The typical setup is one JVM per physical/virtual server. Please [ask us](mailto:consulting@ortussolutions.com) if you have licensing questions.
+
+#### Environment Variable License Configuration
+
+The environment variables used in activating the extension are:
+
+* `COUCHBASE_EXTENSION_EMAIL`  - The email address used to purchase your extension
+* `COUCHBASE_EXTENSION_LICENSE_KEY` - The license key you were provided at registration
+* `COUCHBASE_EXTENSION_SERVER_TYPE` - Optional, defaults to `Production`
+* `COUCHBASE_EXTENSION_ACTIVATION_CODE` - The activation code for your extension and server type.  Note that this can only be obtained manually through the Lucee admin, or by contacting our helpdesk.
+
+To get an activation code, outside of the Lucee Admininstrator, please contact Ortus Solutions via the [helpdesk](https://ortussolutions.atlassian.net/servicedesk/customer/portal/9) or via email at [support@ortussolutions.com](mailto:support@ortussolutions.com)\
+\
+If you wish to simply try out the application, you supply only one environment variable, which will activate a free extension trial:
+
+```
+COUCHBASE_EXTENSION_SERVER_TYPE=Trial
+```
+
+To get your activation code, please contact Ortus Solutions via the [helpdesk](https://ortussolutions.atlassian.net/servicedesk/customer/portal/9) or via email at [support@ortussolutions.com](mailto:support@ortussolutions.com)
+
+#### Properties File License Configuration
+
+To use the properties file method of license configuration, Create a `license.properties` file with the following content:
+
+```bash
+email=[The email address used to purchase your extension]
+licenseKey=[The license key you were provided at registration]
+activationCode=[The activation code for your extension and server type]
+serverType=[ Activation type. Optional. Default to "Production"] 
+```
+
+And place it in the following location: `{lucee-server}/WEB-INF/lucee-server/context/context/ortus/couchbase/license.properties`
+
+Upon server startup, the file will be sourced in and the extension activated.&#x20;
