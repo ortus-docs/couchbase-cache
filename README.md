@@ -16,19 +16,9 @@ Ortus Couchbase Extension is a Lucee Extension that allows your CFML
 server to connect to a Couchbase cluster and leverage it for built-in
 caching, session storage, and NoSQL document storage.
 
-> Couchbase Server is a distributed NoSQL document database for
-> interactive applications. Its scale-out architecture runs in the cloud
-> or on commodity hardware and provides a flexible data model,
-> consistent high-performance, easy scalability and always-on 24x365
-> availability.
->
-> Thanks to a flexible JSON model, Couchbase Server makes it easy to
-> modify your applications without the constraints of a fixed database
-> schema. Submillisecond, high-throughput reads and writes give you
-> consistent high performance. Couchbase Server is easy to scale out,
-> and supports topology changes with no downtime.
-> `<small>`{=html}[Couchbase
-> Inc.](http://www.couchbase.com/)`</small>`{=html}
+<img src="./.gitbook/assets/logo-head-couchbase.svg" alt="Ortus Couchbase Extension" height="300px" style="display:block;margin-left: auto;margin-right:auto"/>
+
+> Couchbase Server is a distributed NoSQL document database for interactive applications. Its scale-out architecture runs in the cloud or on commodity hardware and provides a flexible data model, consistent high-performance, easy scalability and always-on 24x365 availability. Thanks to a flexible JSON model, Couchbase Server makes it easy to modify your applications without the constraints of a fixed database schema. Submillisecond, high-throughput reads and writes give you consistent high performance. Couchbase Server is easy to scale out, and supports topology changes with no downtime. [Couchbase Inc.](http://www.couchbase.com/).
 
  
 
