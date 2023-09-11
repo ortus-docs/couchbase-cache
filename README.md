@@ -1,8 +1,8 @@
 ---
 description: >-
-  The Ortus Couchbase Extension is a native Lucee Extension that allows your CFML
-  server to connect to a Couchbase Cluster and leverage it for built-in caching,
-  session storage, Pub/Sub Messaging, and much more
+  Ortus Couchbase Extension is a Lucee Extension that allows your CFML
+  server to connect to a Couchbase cluster and leverage it for built-in
+  caching, session storage, and NoSQL document storage.
 cover: .gitbook/assets/bg.png
 coverY: 0
 ---
@@ -10,11 +10,6 @@ coverY: 0
 # Introduction
 
 # Ortus Couchbase Extension
-
-
-Ortus Couchbase Extension is a Lucee Extension that allows your CFML
-server to connect to a Couchbase cluster and leverage it for built-in
-caching, session storage, and NoSQL document storage.
 
 <img src="./.gitbook/assets/logo-head-couchbase.svg" alt="Ortus Couchbase Extension" height="300px" style="display:block;margin-left: auto;margin-right:auto"/>
 
